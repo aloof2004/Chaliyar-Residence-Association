@@ -7,12 +7,6 @@
   const navAnchors = document.querySelectorAll(".nav__links a");
   const contactForm = document.getElementById("contact-form");
   const formNote = document.getElementById("form-note");
-  const complaintForm = document.getElementById("complaint-form");
-  const complaintAnonymous = document.getElementById("complaint-anonymous");
-  const complaintName = document.getElementById("complaint-name");
-  const complaintSuccess = document.getElementById("complaint-success");
-  const complaintRef = document.getElementById("complaint-ref");
-  const complaintModal = document.getElementById("complaint-modal");
   const yearEl = document.getElementById("year");
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -109,78 +103,4 @@
     });
   }
 
-  /* ---- Complaint Modal ---- */
-  const openComplaintModal = () => {
-    if (!complaintModal) return;
-    complaintModal.hidden = false;
-    complaintModal.classList.add("is-open");
-    document.body.classList.add("modal-open");
-    const firstField = complaintModal.querySelector("select, input, textarea");
-    if (firstField) setTimeout(() => firstField.focus(), 50);
-  };
-  const closeComplaintModal = () => {
-    if (!complaintModal) return;
-    complaintModal.classList.remove("is-open");
-    complaintModal.hidden = true;
-    document.body.classList.remove("modal-open");
-  };
-
-  document.querySelectorAll("[data-complaint-open]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      // For anchor links, still allow scroll to #complaints section but open modal
-      if (complaintModal) {
-        e.preventDefault();
-        openComplaintModal();
-      }
-    });
-  });
-  document.querySelectorAll("[data-complaint-close]").forEach((el) => {
-    el.addEventListener("click", closeComplaintModal);
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && complaintModal && complaintModal.classList.contains("is-open")) {
-      closeComplaintModal();
-    }
-  });
-
-  /* Open via ?complaint=open (e.g. from activities page nav) */
-  if (complaintModal) {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("complaint") === "open") {
-      setTimeout(openComplaintModal, 300);
-    }
-  }
-
-  /* Complaint form behaviour */
-  if (complaintForm && complaintAnonymous) {
-    const setAnonymousMode = (anonymous) => {
-      complaintForm.classList.toggle("is-anonymous", anonymous);
-      complaintName.required = !anonymous;
-    };
-    complaintAnonymous.addEventListener("change", () => {
-      setAnonymousMode(complaintAnonymous.checked);
-      if (complaintAnonymous.checked) {
-        complaintName.value = "";
-        const phone = document.getElementById("complaint-phone");
-        if (phone) phone.value = "";
-      }
-    });
-
-    const generateRef = () => {
-      const d = new Date();
-      const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-      const rand = Math.floor(1000 + Math.random() * 9000);
-      return `CRA-${ymd}-${rand}`;
-    };
-
-    complaintForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const ref = generateRef();
-      complaintRef.textContent = ref;
-      complaintSuccess.hidden = false;
-      complaintForm.reset();
-      setAnonymousMode(false);
-      complaintSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    });
-  }
 })();

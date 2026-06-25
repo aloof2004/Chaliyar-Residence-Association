@@ -28,7 +28,7 @@
         <li><a href="#community">Community</a></li>
         <li><a href="/activities.html">Activities &amp; Gallery</a></li>
         <li><a href="#committee">Committee</a></li>
-        <li><a href="#complaints" data-complaint-open>Complaints</a></li>
+        
         <li><a href="#contact" class="nav__cta">Contact</a></li>
       </ul>
     </nav>
@@ -157,23 +157,6 @@
       </div>
     </section>
 
-    <section class="section" id="complaints">
-      <div class="container">
-        <div class="section__header section__header--center">
-          <span class="section__eyebrow">Resident Feedback</span>
-          <h2>Letter Box</h2>
-          <p class="section__intro">Report issues affecting our neighbourhood — maintenance, noise, sanitation, or any concern. The committee reviews every submission and responds promptly.</p>
-        </div>
-        <div class="complaint-cta">
-          <h3>Have a concern to raise?</h3>
-          <p>Submit a complaint in under a minute. You'll receive a reference number for follow-up. Anonymous submissions are welcome.</p>
-          <ul class="complaint-cta__tags">
-            <li>Maintenance</li><li>Noise</li><li>Parking</li><li>Sanitation</li><li>Security</li>
-          </ul>
-          <button type="button" class="btn btn--primary" data-complaint-open>Open Complaint Form</button>
-        </div>
-      </div>
-    </section>
 
     <section class="section section--contact" id="contact">
       <div class="container contact">
@@ -208,64 +191,13 @@
       <nav class="footer__links" aria-label="Footer">
         <a href="#about">About</a>
         <a href="/activities.html">Activities &amp; Gallery</a>
-        <a href="#complaints" data-complaint-open>Complaints</a>
+        
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer__copy">&copy; <span id="year"></span> Chaliyar Residence Association. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Complaint Modal -->
-  <div class="modal" id="complaint-modal" role="dialog" aria-modal="true" aria-labelledby="complaint-modal-title" hidden>
-    <div class="modal__backdrop" data-complaint-close></div>
-    <div class="modal__dialog">
-      <div class="modal__header">
-        <div>
-          <h3 id="complaint-modal-title">Submit a Complaint</h3>
-          <p>The committee reviews every submission. Tick "anonymous" to hide your identity.</p>
-        </div>
-        <button type="button" class="modal__close" aria-label="Close" data-complaint-close>×</button>
-      </div>
-      <div class="modal__body">
-        <form id="complaint-form">
-          <div class="form__row">
-            <div class="form__group">
-              <label for="complaint-category">Category</label>
-              <select id="complaint-category" name="category" required>
-                <option value="" disabled selected>Select a category</option>
-                <option value="maintenance">Maintenance &amp; Repairs</option>
-                <option value="noise">Noise &amp; Disturbances</option>
-                <option value="parking">Parking &amp; Access</option>
-                <option value="sanitation">Sanitation &amp; Waste</option>
-                <option value="security">Security &amp; Safety</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label for="complaint-house">House / Unit No.</label>
-              <input type="text" id="complaint-house" name="house" required placeholder="e.g. 12B">
-            </div>
-          </div>
-          <div class="form__group form__group--checkbox">
-            <label class="checkbox" for="complaint-anonymous">
-              <input type="checkbox" id="complaint-anonymous" name="anonymous">
-              <span>Submit anonymously</span>
-            </label>
-          </div>
-          <div class="form__row" id="complaint-identity-fields">
-            <div class="form__group"><label for="complaint-name">Your Name</label><input type="text" id="complaint-name" name="name" required placeholder="Full name"></div>
-            <div class="form__group"><label for="complaint-phone">Phone</label><input type="tel" id="complaint-phone" name="phone" placeholder="+91 98765 43210"></div>
-          </div>
-          <div class="form__group"><label for="complaint-subject">Subject</label><input type="text" id="complaint-subject" name="subject" required placeholder="Brief summary of the issue"></div>
-          <div class="form__group"><label for="complaint-details">Complaint Details</label><textarea id="complaint-details" name="details" rows="5" required placeholder="Describe the issue, when it occurred, and any other relevant information…"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--full">Submit Complaint</button>
-          <p class="form__success" id="complaint-success" hidden>
-            Your complaint has been submitted. Reference number: <strong id="complaint-ref"></strong>.
-            Please save this number for follow-up.
-          </p>
-        </form>
-      </div>
-    </div>
   </div>
 
   <script src="/js/main.js"></script>
