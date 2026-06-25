@@ -28,7 +28,7 @@
         <li><a href="#community">Community</a></li>
         <li><a href="/activities.html">Activities &amp; Gallery</a></li>
         <li><a href="#committee">Committee</a></li>
-        <li><a href="#complaints" data-complaint-open>Complaints</a></li>
+        <li><a href="#complaints" data-complaint-open>Letters</a></li>
         <li><a href="#contact" class="nav__cta">Contact</a></li>
       </ul>
     </nav>
@@ -165,12 +165,12 @@
           <p class="section__intro">Report issues affecting our neighbourhood — maintenance, noise, sanitation, or any concern. The committee reviews every submission and responds promptly.</p>
         </div>
         <div class="complaint-cta">
-          <h3>Have a concern to raise?</h3>
-          <p>Submit a complaint in under a minute. You'll receive a reference number for follow-up. Anonymous submissions are welcome.</p>
+          <h3>Have something to share?</h3>
+          <p>Drop a letter to the committee in under a minute. You'll receive a reference number for follow-up. Anonymous submissions are welcome.</p>
           <ul class="complaint-cta__tags">
             <li>Maintenance</li><li>Noise</li><li>Parking</li><li>Sanitation</li><li>Security</li>
           </ul>
-          <button type="button" class="btn btn--primary" data-complaint-open>Open Complaint Form</button>
+          <button type="button" class="btn btn--primary" data-complaint-open>Open Letter Form</button>
         </div>
       </div>
     </section>
@@ -208,7 +208,7 @@
       <nav class="footer__links" aria-label="Footer">
         <a href="#about">About</a>
         <a href="/activities.html">Activities &amp; Gallery</a>
-        <a href="#complaints" data-complaint-open>Complaints</a>
+        <a href="#complaints" data-complaint-open>Letters</a>
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer__copy">&copy; <span id="year"></span> Chaliyar Residence Association. All rights reserved.</p>
@@ -221,7 +221,7 @@
     <div class="modal__dialog">
       <div class="modal__header">
         <div>
-          <h3 id="complaint-modal-title">Submit a Complaint</h3>
+          <h3 id="complaint-modal-title">Submit a Letter</h3>
           <p>The committee reviews every submission. Tick "anonymous" to hide your identity.</p>
         </div>
         <button type="button" class="modal__close" aria-label="Close" data-complaint-close>×</button>
@@ -257,10 +257,10 @@
             <div class="form__group"><label for="complaint-phone">Phone</label><input type="tel" id="complaint-phone" name="phone" placeholder="+91 98765 43210"></div>
           </div>
           <div class="form__group"><label for="complaint-subject">Subject</label><input type="text" id="complaint-subject" name="subject" required placeholder="Brief summary of the issue"></div>
-          <div class="form__group"><label for="complaint-details">Complaint Details</label><textarea id="complaint-details" name="details" rows="5" required placeholder="Describe the issue, when it occurred, and any other relevant information…"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--full">Submit Complaint</button>
+          <div class="form__group"><label for="complaint-details">Letter Details</label><textarea id="complaint-details" name="details" rows="5" required placeholder="Describe the issue, when it occurred, and any other relevant information…"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--full">Submit Letter</button>
           <p class="form__success" id="complaint-success" hidden>
-            Your complaint has been submitted. Reference number: <strong id="complaint-ref"></strong>.
+            Your letter has been submitted. Reference number: <strong id="complaint-ref"></strong>.
             Please save this number for follow-up.
           </p>
         </form>
