@@ -11,12 +11,14 @@
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* Sticky header shadow */
   if (header) {
     window.addEventListener("scroll", () => {
       header.classList.toggle("scrolled", window.scrollY > 20);
     }, { passive: true });
   }
 
+  /* Mobile menu */
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("open");
@@ -32,6 +34,7 @@
     });
   }
 
+  /* Active nav link on scroll (home only) */
   const sections = document.querySelectorAll("section[id]");
   const path = window.location.pathname;
   const isHomePage = path.endsWith("/site.html") || path === "/" || path.endsWith("/");
@@ -50,8 +53,9 @@
     sections.forEach((section) => observerNav.observe(section));
   }
 
+  /* Scroll reveal */
   const revealEls = document.querySelectorAll(
-    ".section__header, .card, .timeline__item, .member, .gallery__item, .about__grid > *, .events-preview__block"
+    ".section__header, .card, .timeline__item, .member, .gallery__item, .about__grid > *, .complaint-cta, .events-preview__block"
   );
   revealEls.forEach((el) => el.classList.add("reveal"));
   const observerReveal = new IntersectionObserver((entries) => {
@@ -64,6 +68,7 @@
   }, { threshold: 0.12 });
   revealEls.forEach((el) => observerReveal.observe(el));
 
+  /* Counters */
   const counters = document.querySelectorAll("[data-count]");
   const animateCounter = (el) => {
     const target = parseInt(el.getAttribute("data-count"), 10);
@@ -88,6 +93,7 @@
   }, { threshold: 0.5 });
   counters.forEach((c) => counterObserver.observe(c));
 
+  /* Contact form */
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -97,48 +103,4 @@
     });
   }
 
-  /* ---- Modals (logo lightbox + executive members) ---- */
-  const openModal = (modal) => {
-    if (!modal) return;
-    modal.hidden = false;
-    modal.setAttribute("aria-hidden", "false");
-    requestAnimationFrame(() => modal.classList.add("is-open"));
-    document.body.style.overflow = "hidden";
-  };
-  const closeModal = (modal) => {
-    if (!modal) return;
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-    setTimeout(() => { modal.hidden = true; }, 200);
-  };
-
-  const logoModal = document.getElementById("logo-modal");
-  const brandLogo = document.getElementById("brand-logo");
-  if (brandLogo && logoModal) {
-    const trigger = (e) => { e.preventDefault(); e.stopPropagation(); openModal(logoModal); };
-    brandLogo.addEventListener("click", trigger);
-    brandLogo.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") trigger(e);
-    });
-    // Prevent the parent <a> from navigating when logo is clicked
-    brandLogo.closest("a")?.addEventListener("click", (e) => {
-      if (e.target === brandLogo) e.preventDefault();
-    });
-  }
-
-  const execModal = document.getElementById("executive-modal");
-  const execBtn = document.getElementById("show-executive-btn");
-  if (execBtn && execModal) {
-    execBtn.addEventListener("click", () => openModal(execModal));
-  }
-
-  document.querySelectorAll("[data-close-modal]").forEach((el) => {
-    el.addEventListener("click", () => closeModal(el.closest(".modal")));
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      document.querySelectorAll(".modal.is-open").forEach(closeModal);
-    }
-  });
 })();
