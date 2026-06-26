@@ -7,7 +7,7 @@
   <title>Chaliyar Residence Association | Karad Paramba</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&family=Noto+Sans+Malayalam:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
   <link rel="stylesheet" href="/css/styles.css">
@@ -16,7 +16,7 @@
   <header class="site-header" id="top">
     <nav class="nav container">
       <a href="/site.html" class="nav__brand">
-        <img src="/images/logo.png" alt="Chaliyar Residence Association" class="nav__brand-logo">
+        <img src="/images/logo.png" alt="Chaliyar Residence Association" class="nav__brand-logo" id="brand-logo" role="button" tabindex="0" aria-label="View logo">
         <span class="nav__brand-text">
           <strong>Chaliyar Residence</strong>
           <small>Karad Paramba · Reg. MPM/CA/52/2015</small>
@@ -27,10 +27,8 @@
       </button>
       <ul class="nav__links">
         <li><a href="#about">About</a></li>
-        <li><a href="#community">Community</a></li>
         <li><a href="/activities.html">Activities &amp; Gallery</a></li>
         <li><a href="#committee">Committee</a></li>
-        
         <li><a href="#contact" class="nav__cta">Contact</a></li>
       </ul>
     </nav>
@@ -61,7 +59,7 @@
     <section class="stats">
       <div class="container stats__grid stats__grid--two">
         <article class="stat"><span class="stat__number" data-count="73">0</span><span class="stat__label">Resident Families</span></article>
-        <article class="stat"><span class="stat__number">2015</span><span class="stat__label">Year Established</span></article>
+        <article class="stat"><span class="stat__number">2015</span><span class="stat__label">Year Registered</span></article>
       </div>
     </section>
 
@@ -72,14 +70,14 @@
           <h2>Our Hometown, Our Home</h2>
         </div>
         <div class="about__grid">
-          <div class="about__text">
-            <p>Established in <strong>2015</strong> (Reg. No. <strong>MPM/CA/52/2015</strong>), the Chaliyar Residence Association brings together families from Karad Paramba — a peaceful neighbourhood shaped by the Chaliyar river, lush greenery, and the warmth of Malabar hospitality.</p>
-            <p>Formed to strengthen bonds among residents, we coordinate community events, maintain shared spaces, and support one another through everyday life and special occasions alike.</p>
+          <div class="about__text" lang="ml">
+            <p><strong>2015</strong>-ൽ രജിസ്റ്റർ ചെയ്ത (രജി. നം. <strong>MPM/CA/52/2015</strong>) ചാലിയാർ റസിഡൻസ് അസോസിയേഷൻ, ചാലിയാർ പുഴയും പച്ചപ്പും മലബാർ ആതിഥ്യമര്യാദയും ഇഴചേർന്നു നിൽക്കുന്ന കാരാട് പറമ്പിലെ കുടുംബങ്ങളെ ഒരുമിച്ച് ചേർക്കുന്നു.</p>
+            <p>അയൽവാസികൾ തമ്മിലുള്ള ബന്ധം ദൃഢപ്പെടുത്തുക, കമ്മ്യൂണിറ്റി പരിപാടികൾ ഏകോപിപ്പിക്കുക, പൊതു ഇടങ്ങൾ പരിപാലിക്കുക, ദൈനംദിന ജീവിതത്തിലും വിശേഷാവസരങ്ങളിലും പരസ്പരം താങ്ങാവുക എന്നിവയാണ് അസോസിയേഷന്റെ ലക്ഷ്യങ്ങൾ.</p>
             <ul class="about__list">
-              <li>Safe, well-maintained residential environment</li>
-              <li>Cultural celebrations and festival gatherings</li>
-              <li>Neighbourhood welfare and mutual support</li>
-              <li>Youth engagement and senior care initiatives</li>
+              <li>സുരക്ഷിതവും വൃത്തിയുള്ളതുമായ പാർപ്പിട അന്തരീക്ഷം</li>
+              <li>സാംസ്കാരിക ആഘോഷങ്ങളും ഉത്സവ കൂട്ടായ്മകളും</li>
+              <li>അയൽപക്ക ക്ഷേമവും പരസ്പര സഹായവും</li>
+              <li>യുവജന പങ്കാളിത്തവും മുതിർന്നവർക്കുള്ള പരിചരണവും</li>
             </ul>
           </div>
           <div class="about__card">
@@ -95,22 +93,6 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="community">
-      <div class="container">
-        <div class="section__header section__header--center">
-          <span class="section__eyebrow">Life Together</span>
-          <h2>What Makes Us a Community</h2>
-          <p class="section__intro">More than a collection of homes — we are a living neighbourhood built on trust, respect, and the shared pride of Karad Paramba.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="card__icon" aria-hidden="true">🏡</div><h3>Residential Harmony</h3><p>We work together to keep our lanes clean, our gardens green, and our surroundings peaceful for every family.</p></article>
-          <article class="card"><div class="card__icon" aria-hidden="true">🪔</div><h3>Cultural Heritage</h3><p>Onam, Eid, Vishu, and local festivals are celebrated together — honouring the diversity that defines our hometown.</p></article>
-          <article class="card"><div class="card__icon" aria-hidden="true">🤝</div><h3>Mutual Support</h3><p>From health emergencies to happy milestones, residents stand by one another as true neighbours and friends.</p></article>
-          <article class="card"><div class="card__icon" aria-hidden="true">🌿</div><h3>Green Initiatives</h3><p>Tree planting drives, waste management, and water conservation efforts keep Karad Paramba beautiful for generations.</p></article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="events">
       <div class="container">
         <div class="section__header section__header--center">
@@ -120,7 +102,7 @@
         </div>
         <div class="events-preview">
           <div class="events-preview__block">
-            <h3 class="events-preview__title">Upcoming Highlights</h3>
+            <h3 class="events-preview__title">Activities</h3>
             <div class="timeline timeline--preview">
               <article class="timeline__item"><time>January</time><h3>New Year Gathering</h3><p>Community breakfast and resolutions for the year ahead.</p></article>
               <article class="timeline__item"><time>August–September</time><h3>Onam Festivities</h3><p>Pookkalam competitions, Onasadya, and cultural programmes.</p></article>
@@ -150,14 +132,15 @@
           <p class="section__intro">Elected by residents to serve the community with transparency and dedication.</p>
         </div>
         <div class="committee">
-          <article class="member"><div class="member__avatar">AP</div><h3>President</h3><p class="member__name">Association President</p><p class="member__role">Overall leadership &amp; representation</p></article>
-          <article class="member"><div class="member__avatar">SK</div><h3>Secretary</h3><p class="member__name">Association Secretary</p><p class="member__role">Records, meetings &amp; communication</p></article>
-          <article class="member"><div class="member__avatar">MR</div><h3>Treasurer</h3><p class="member__name">Association Treasurer</p><p class="member__role">Finance &amp; fund management</p></article>
-          <article class="member"><div class="member__avatar">NH</div><h3>Welfare Lead</h3><p class="member__name">Welfare Coordinator</p><p class="member__role">Member support &amp; outreach</p></article>
+          <article class="member"><div class="member__avatar">AP</div><h3>President</h3><p class="member__name">Association President</p></article>
+          <article class="member"><div class="member__avatar">SK</div><h3>Secretary</h3><p class="member__name">Association Secretary</p></article>
+          <article class="member"><div class="member__avatar">MR</div><h3>Treasurer</h3><p class="member__name">Association Treasurer</p></article>
+        </div>
+        <div class="section__more">
+          <button type="button" class="btn btn--outline" id="show-executive-btn">Show Executive Members →</button>
         </div>
       </div>
     </section>
-
 
     <section class="section section--contact" id="contact">
       <div class="container contact">
@@ -169,7 +152,6 @@
             <li><strong>Location</strong><span>Karad Paramba, Malappuram District, Kerala</span></li>
             <li><strong>Email</strong><a href="mailto:chaliyar.resi.krd@gmail.com">chaliyar.resi.krd@gmail.com</a></li>
             <li><strong>Phone</strong><a href="tel:+919876543210">+91 98765 43210</a></li>
-            <li><strong>Meetings</strong><span>First Sunday of every month, 6:00 PM</span></li>
           </ul>
         </div>
         <form class="contact__form" id="contact-form">
@@ -192,13 +174,41 @@
       <nav class="footer__links" aria-label="Footer">
         <a href="#about">About</a>
         <a href="/activities.html">Activities &amp; Gallery</a>
-        
         <a href="#contact">Contact</a>
       </nav>
       <p class="footer__copy">&copy; <span id="year"></span> Chaliyar Residence Association. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Logo lightbox modal -->
+  <div class="modal" id="logo-modal" hidden aria-hidden="true" role="dialog" aria-label="Association logo">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content modal__content--logo">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close">&times;</button>
+      <img src="/images/logo.png" alt="Chaliyar Residence Association logo" class="modal__logo">
+    </div>
+  </div>
+
+  <!-- Executive members modal -->
+  <div class="modal" id="executive-modal" hidden aria-hidden="true" role="dialog" aria-label="Executive members">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close">&times;</button>
+      <h3 class="modal__title">Executive Members</h3>
+      <p class="modal__subtitle">Elected representatives supporting the office bearers.</p>
+      <ol class="exec-list">
+        <li><span class="exec-list__num">1</span><span class="exec-list__name">Executive Member 1</span></li>
+        <li><span class="exec-list__num">2</span><span class="exec-list__name">Executive Member 2</span></li>
+        <li><span class="exec-list__num">3</span><span class="exec-list__name">Executive Member 3</span></li>
+        <li><span class="exec-list__num">4</span><span class="exec-list__name">Executive Member 4</span></li>
+        <li><span class="exec-list__num">5</span><span class="exec-list__name">Executive Member 5</span></li>
+        <li><span class="exec-list__num">6</span><span class="exec-list__name">Executive Member 6</span></li>
+        <li><span class="exec-list__num">7</span><span class="exec-list__name">Executive Member 7</span></li>
+        <li><span class="exec-list__num">8</span><span class="exec-list__name">Executive Member 8</span></li>
+        <li><span class="exec-list__num">9</span><span class="exec-list__name">Executive Member 9</span></li>
+        <li><span class="exec-list__num">10</span><span class="exec-list__name">Executive Member 10</span></li>
+      </ol>
+    </div>
   </div>
 
   <script src="/js/main.js"></script>
