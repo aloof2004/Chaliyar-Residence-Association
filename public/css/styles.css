@@ -1583,4 +1583,4 @@ body.modal-open { overflow: hidden; }
 
 /* Committee show more */
 .committee .committee__hidden { display: none; }
-.committee.committee--expanded .committee__hidden { display: flex; }
+.committee.committee--expanded .committee__hidden { display: block; }
