@@ -45,6 +45,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -99,6 +100,8 @@ a:hover {
   align-items: center;
   gap: 0.75rem;
   color: var(--color-text);
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .nav__brand:hover {
@@ -122,12 +125,16 @@ a:hover {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  min-width: 0;
 }
 
 .nav__brand-text strong {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav__brand-text small {
@@ -135,6 +142,9 @@ a:hover {
   color: var(--color-text-muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav__links {
@@ -507,6 +517,7 @@ a:hover {
   object-fit: contain;
   border-radius: 50%;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .stat {
@@ -843,19 +854,22 @@ a:hover {
 }
 
 .member h3 {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 
 .member__name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  line-height: 1.25;
+  margin: 0;
+  word-break: break-word;
 }
 
 .member__role {
@@ -1258,6 +1272,10 @@ a:hover {
     gap: 0.75rem;
   }
 
+  .stats__grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about__grid,
   .contact,
   .complaint-box,
@@ -1266,9 +1284,13 @@ a:hover {
     gap: 2rem;
   }
 
-  .cards,
-  .committee {
+  .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .committee {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
   .gallery {
@@ -1287,6 +1309,22 @@ a:hover {
   }
 }
 
+/* Small tablets / large phones */
+@media (max-width: 720px) {
+  .committee {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .member {
+    padding: 1.5rem 1rem;
+  }
+  .member__avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 0.95rem;
+  }
+}
+
 /* Phones */
 @media (max-width: 640px) {
   .container {
@@ -1298,10 +1336,14 @@ a:hover {
   }
 
   .nav__brand-text strong {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   .nav__brand-text small {
-    font-size: 0.65rem;
+    display: none;
+  }
+  .nav__brand-logo {
+    width: 38px;
+    height: 38px;
   }
   .nav__brand-mark {
     width: 38px;
@@ -1317,11 +1359,16 @@ a:hover {
   .hero__desc {
     font-size: 0.98rem;
   }
+  .hero__eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
 
   .stats {
     margin-top: -2rem;
   }
-  .stats__grid {
+  .stats__grid,
+  .stats__grid--two {
     grid-template-columns: 1fr;
     padding: 1.25rem;
   }
@@ -1336,8 +1383,7 @@ a:hover {
     font-size: 2rem;
   }
 
-  .cards,
-  .committee {
+  .cards {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
