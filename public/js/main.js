@@ -103,4 +103,17 @@
     });
   }
 
+  /* Committee show more */
+  const committeeToggle = document.getElementById("committee-toggle");
+  const committeeGrid = document.getElementById("committee-grid");
+  if (committeeToggle && committeeGrid) {
+    committeeToggle.addEventListener("click", () => {
+      const expanded = committeeToggle.getAttribute("data-expanded") === "true";
+      const next = !expanded;
+      committeeGrid.classList.toggle("committee--expanded", next);
+      committeeToggle.setAttribute("data-expanded", String(next));
+      committeeToggle.textContent = next ? "Show less ↑" : "Show more →";
+    });
+  }
+
 })();
