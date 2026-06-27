@@ -517,6 +517,7 @@ a:hover {
   object-fit: contain;
   border-radius: 50%;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .stat {
