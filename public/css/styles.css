@@ -843,19 +843,22 @@ a:hover {
 }
 
 .member h3 {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 
 .member__name {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--color-primary);
-  margin-bottom: 0.25rem;
+  line-height: 1.25;
+  margin: 0;
+  word-break: break-word;
 }
 
 .member__role {
