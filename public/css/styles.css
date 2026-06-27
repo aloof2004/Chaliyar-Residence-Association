@@ -1272,6 +1272,10 @@ a:hover {
     gap: 0.75rem;
   }
 
+  .stats__grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about__grid,
   .contact,
   .complaint-box,
@@ -1280,9 +1284,13 @@ a:hover {
     gap: 2rem;
   }
 
-  .cards,
-  .committee {
+  .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .committee {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
 
   .gallery {
@@ -1298,6 +1306,22 @@ a:hover {
   .complaint-box__form,
   .contact__form {
     padding: 1.5rem;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 720px) {
+  .committee {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .member {
+    padding: 1.5rem 1rem;
+  }
+  .member__avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 0.95rem;
   }
 }
 
