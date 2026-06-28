@@ -117,3 +117,23 @@
   }
 
 })();
+
+/* Lightbox functions */
+function openLightbox(imageSrc, caption) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox__image");
+  const lightboxCaption = document.getElementById("lightbox__caption");
+  
+  lightboxImg.src = imageSrc;
+  lightboxCaption.textContent = caption;
+  lightbox.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox(event) {
+  if (event && event.target.id !== "lightbox") return;
+  
+  const lightbox = document.getElementById("lightbox");
+  lightbox.classList.remove("active");
+  document.body.style.overflow = "";
+}

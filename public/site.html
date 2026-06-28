@@ -106,16 +106,18 @@
             <h3 class="events-preview__title">Activities</h3>
             <div class="timeline timeline--preview">
               <article class="timeline__item"><time>28 June</time><h3>വിദ്യാഭ്യാസ മികവിന് ആദരം</h3><p>വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അസോസിയേഷന്റെ നേതൃത്വത്തിൽ അനുമോദിച്ചു.</p></article>
-              <article class="timeline__item"><time>15 July</time><h3>ഓഫീസ് നിർമ്മാണ പ്രവർത്തനങ്ങൾ</h3><p>ഓഫീസ് നിർമ്മാണം യാഥാർഥ്യമാക്കുന്നതിനുള്ള തുടർ നടപടികളും ആവശ്യമായ ക്രമീകരണങ്ങളും കമ്മിറ്റി സജീവമായി മുന്നോട്ടുകൊണ്ടുപോകുകയാണ്.</p></article>
-              <article class="timeline__item"><time>21 December</time><h3>ട്രട്രാൻസ്ഫോർമർ സ്ഥാപിക്കാനുള്ള നടപടികൾ</h3><p>പ്രദേശവാസികൾക്ക് കൂടുതൽ കാര്യക്ഷമവും തടസ്സരഹിതവുമായ വൈദ്യുതി വിതരണം ഉറപ്പാക്കുക എന്ന ലക്ഷ്യത്തോടെയാണ് ഈ പ്രവർത്തനങ്ങൾ മുന്നോട്ടുകൊണ്ടുപോകുന്നത്.</p></article>
+              <article class="timeline__item"><time></time><h3>ഓഫീസ് നിർമ്മാണ പ്രവർത്തനങ്ങൾ</h3><p>ഓഫീസ് നിർമ്മാണം യാഥാർഥ്യമാക്കുന്നതിനുള്ള തുടർ നടപടികളും ആവശ്യമായ ക്രമീകരണങ്ങളും കമ്മിറ്റി സജീവമായി മുന്നോട്ടുകൊണ്ടുപോകുകയാണ്.</p></article>
+              <article class="timeline__item"><time></time><h3>ട്രാൻസ്ഫോർമർ സ്ഥാപിക്കാനുള്ള നടപടികൾ</h3><p>പ്രദേശവാസികൾക്ക് കൂടുതൽ കാര്യക്ഷമവും തടസ്സരഹിതവുമായ വൈദ്യുതി വിതരണം ഉറപ്പാക്കുക എന്ന ലക്ഷ്യത്തോടെയാണ് ഈ പ്രവർത്തനങ്ങൾ മുന്നോട്ടുകൊണ്ടുപോകുന്നത്.</p></article>
             </div>
           </div>
           <div class="events-preview__block">
             <h3 class="events-preview__title">Recent Moments</h3>
             <div class="gallery gallery--preview">
-              <figure class="gallery__item gallery__item--wide"><img src="/images/website logo copy.jpg" alt="Chaliyar Residence Association"></figure>
-              <figure class="gallery__item"><img src="/images/gallery-meeting.jpg" alt="Community Meeting"><figcaption>Community Meeting</figcaption></figure>
-              <figure class="gallery__item"><img src="/images/gallery-green-drive.jpg" alt="Green Drive"><figcaption>Green Drive</figcaption></figure>
+                <figure class="gallery__item gallery__item--wide"><img src="/images/website logo copy.jpg" alt="Chaliyar Residence Association" class="gallery__img" onclick="openLightbox('/images/website logo copy.jpg', 'Chaliyar Residence Association')"></figure>
+                <figure class="gallery__item"><img src="/images/1 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/1 copy.jpeg', '')"></figure>
+                <figure class="gallery__item"><img src="/images/2 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/2 copy.jpeg', '')"></figure>
+                <figure class="gallery__item"><img src="/images/3 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/3 copy.jpeg', '')"></figure>
+                <figure class="gallery__item"><img src="/images/4 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/4 copy.jpeg', '')"></figure>
             </div>
           </div>
         </div>
@@ -192,6 +194,15 @@
       <p class="footer__copy">&copy; <span id="year"></span> Chaliyar Residence Association. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox__content">
+      <button class="lightbox__close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox__image" src="" alt="" class="lightbox__img">
+      <p id="lightbox__caption" class="lightbox__caption"></p>
+    </div>
+  </div>
 
   <script src="/js/main.js"></script>
 </body>
