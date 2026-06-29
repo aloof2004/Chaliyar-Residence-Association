@@ -103,6 +103,29 @@
     });
   }
 
+  /* Gallery folder tabs */
+  const galleryFolders = document.getElementById("gallery-folders");
+  const galleryGrid = document.getElementById("gallery-grid");
+  if (galleryFolders && galleryGrid) {
+    const items = galleryGrid.querySelectorAll("[data-folder]");
+    galleryFolders.addEventListener("click", (e) => {
+      const btn = e.target.closest(".gallery-folder");
+      if (!btn) return;
+      const folder = btn.getAttribute("data-folder");
+      galleryFolders.querySelectorAll(".gallery-folder").forEach((b) => b.classList.remove("gallery-folder--active"));
+      btn.classList.add("gallery-folder--active");
+      items.forEach((item) => {
+        if (folder === "all" || item.getAttribute("data-folder") === folder) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+    /* Reset folder items on page load */
+    items.forEach((item) => item.style.display = "");
+  }
+
   /* Committee show more */
   const committeeToggle = document.getElementById("committee-toggle");
   const committeeGrid = document.getElementById("committee-grid");
@@ -137,3 +160,42 @@ function closeLightbox(event) {
   lightbox.classList.remove("active");
   document.body.style.overflow = "";
 }
+
+/* Member Modal functions */
+function openMemberModal(name, role, avatar, contact) {
+  const modal = document.getElementById("member-modal");
+  const avatarEl = document.getElementById("member-modal-avatar");
+  const nameEl = document.getElementById("member-modal-name");
+  const roleEl = document.getElementById("member-modal-role");
+  const contactEl = document.getElementById("member-modal-contact");
+  
+  avatarEl.textContent = avatar;
+  nameEl.textContent = name;
+  roleEl.textContent = role;
+  contactEl.textContent = "Contact: " + contact;
+  
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMemberModal(event) {
+  if (event && event.target.id !== "member-modal") return;
+  
+  const modal = document.getElementById("member-modal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+/* Attach click handlers to member cards */
+document.addEventListener("DOMContentLoaded", () => {
+  const memberCards = document.querySelectorAll(".member--clickable");
+  memberCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const name = card.getAttribute("data-name");
+      const role = card.getAttribute("data-role");
+      const avatar = card.getAttribute("data-avatar");
+      const contact = card.getAttribute("data-contact");
+      openMemberModal(name, role, avatar, contact);
+    });
+  });
+});
