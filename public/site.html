@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&family=Noto+Sans+Malayalam:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/images/logo.png">
-  <link rel="apple-touch-icon" href="/images/logo.png">
+  <link rel="icon" type="image/png" href="/gallery/logo.png">
+  <link rel="apple-touch-icon" href="/gallery/logo.png">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav container">
       <a href="/site.html" class="nav__brand">
-        <img src="/images/logo.png" alt="Chaliyar Residence Association" class="nav__brand-logo">
+        <img src="/gallery/logo.png" alt="Chaliyar Residence Association" class="nav__brand-logo">
         <span class="nav__brand-text">
           <strong>Chaliyar Residence</strong>
           <small>Karad Paramba · Reg. MPM/CA/52/2015</small>
@@ -66,21 +66,38 @@
 
     <!-- Notifications -->
     <section class="section section--notifications" id="notifications">
-      <div class="container">
-        <div class="notif-header">
-          <span class="notif-header__icon">📢</span>
-          <h2 class="notif-header__title">Announcements</h2>
-        </div>
-        <div class="notif-ticker" id="notif-ticker">
-          <div class="notif-ticker__track" id="notif-track">
-            <span class="notif-ticker__item">🏆 <strong>28 June</strong> — വിദ്യാഭ്യാസ മികവിന് ആദരം: വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അനുമോദിച്ചു.</span>
-            <span class="notif-ticker__item">🎉 <strong>ആഘോഷം</strong> — വരുന്ന ഉത്സവകാലത്ത് പ്രത്യേക പരിപാടികൾ ആസൂത്രണം ചെയ്യുന്നു. എല്ലാവരും പങ്കെടുക്കുക!</span>
-            <!-- Duplicate for seamless loop -->
-            <span class="notif-ticker__item">🏆 <strong>28 June</strong> — വിദ്യാഭ്യാസ മികവിന് ആദരം: വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അനുമോദിച്ചു.</span>
-            <span class="notif-ticker__item">🎉 <strong>ആഘോഷം</strong> — വരുന്ന ഉത്സവകാലത്ത് പ്രത്യേക പരിപാടികൾ ആസൂത്രണം ചെയ്യുന്നു. എല്ലാവരും പങ്കെടുക്കുക!</span>
+     <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__eyebrow">Stay Updated</span>
+        <h2>Notice Board</h2>
+        <p class="section__intro">
+            Important announcements, meetings and updates from Chaliyar Residence Association.
+        </p>
+      </div>
+      <div class="notice-board">
+        <article class="notice-card">
+          <div class="notice-card__icon">📌</div>
+          <div class="notice-card__content">
+            <span class="notice-date">28 June 2026</span>
+            <h3>വിദ്യാഭ്യാസ മികവിന് ആദരം</h3> 
+            <p>വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അസോസിയേഷന്റെ നേതൃത്വത്തിൽ അനുമോദിച്ചു.</p>
+            <a href="#">Read More →</a>
           </div>
+        </article>
+        <article class="notice-card">
+          <div class="notice-card__icon">🎉</div>
+          <div class="notice-card__content">
+            <span class="notice-date">Coming Soon</span>
+            <h3>ആഘോഷ പരിപാടികൾ</h3>
+            <p>വരുന്ന ഉത്സവകാലത്ത് പ്രത്യേക പരിപാടികൾ ആസൂത്രണം ചെയ്യുന്നു. എല്ലാവരും പങ്കെടുക്കുക.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </article>
+        <div class="gallery-preview-footer">
+          <a href="#" class="btn btn--outline">View All Notices →</a>
         </div>
       </div>
+     </div>
     </section>
 
     <section class="section" id="about">
@@ -120,28 +137,77 @@
           <h2>Activities &amp; Gallery</h2>
           <p class="section__intro">Highlights from our year-round gatherings and snapshots of life together in Karad Paramba.</p>
         </div>
-        <div class="events-preview">
+        <div class="community-updates">
           <div class="events-preview__block">
-            <h3 class="events-preview__title">Activities</h3>
-            <div class="timeline timeline--preview">
-              <article class="timeline__item"><time>28 June</time><h3>വിദ്യാഭ്യാസ മികവിന് ആദരം</h3><p>വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അസോസിയേഷന്റെ നേതൃത്വത്തിൽ അനുമോദിച്ചു.</p></article>
-              <article class="timeline__item"><time></time><h3>ഓഫീസ് നിർമ്മാണ പ്രവർത്തനങ്ങൾ</h3><p>ഓഫീസ് നിർമ്മാണം യാഥാർഥ്യമാക്കുന്നതിനുള്ള തുടർ നടപടികളും ആവശ്യമായ ക്രമീകരണങ്ങളും കമ്മിറ്റി സജീവമായി മുന്നോട്ടുകൊണ്ടുപോകുകയാണ്.</p></article>
-              <article class="timeline__item"><time></time><h3>ട്രാൻസ്ഫോർമർ സ്ഥാപിക്കാനുള്ള നടപടികൾ</h3><p>പ്രദേശവാസികൾക്ക് കൂടുതൽ കാര്യക്ഷമവും തടസ്സരഹിതവുമായ വൈദ്യുതി വിതരണം ഉറപ്പാക്കുക എന്ന ലക്ഷ്യത്തോടെയാണ് ഈ പ്രവർത്തനങ്ങൾ മുന്നോട്ടുകൊണ്ടുപോകുന്നത്.</p></article>
+            <h3 class="events-preview__title">Community Activities</h3>
+            <p class="activities-intro">
+              Stay updated with the latest programmes,
+              meetings and development works happening
+              within Chaliyar Residence.
+            </p>
+            <div class="activities-scroll">
+              <div class="timeline timeline--preview">
+                <article class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-date">28 June 2026</span>
+                    <h3>വിദ്യാഭ്യാസ മികവിന് ആദരം</h3>
+                    <p>വിവിധ പൊതുപരീക്ഷകളിൽ മികച്ച വിജയം നേടിയ വിദ്യാർത്ഥികളെ അസോസിയേഷന്റെ നേതൃത്വത്തിൽ അനുമോദിച്ചു.</p>
+                  </div>
+                </article>
+                <article class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-date">Ongoing</span>
+                    <h3>ഓഫീസ് നിർമ്മാണ പ്രവർത്തനങ്ങൾ</h3>
+                    <p>ഓഫീസ് നിർമ്മാണം യാഥാർഥ്യമാക്കുന്നതിനുള്ള തുടർ നടപടികളും ആവശ്യമായ ക്രമീകരണങ്ങളും കമ്മിറ്റി സജീവമായി മുന്നോട്ടുകൊണ്ടുപോകുകയാണ്.</p>
+                  </div>
+                </article>
+                <article class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-date">Ongoing</span>
+                    <h3>ട്രാൻസ്ഫോർമർ സ്ഥാപിക്കാനുള്ള നടപടികൾ</h3>
+                    <p>പ്രദേശവാസികൾക്ക് കൂടുതൽ കാര്യക്ഷമവും തടസ്സരഹിതവുമായ വൈദ്യുതി വിതരണം ഉറപ്പാക്കുക എന്ന ലക്ഷ്യത്തോടെയാണ് ഈ പ്രവർത്തനങ്ങൾ മുന്നോട്ടുകൊണ്ടുപോകുന്നത്.</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
           <div class="events-preview__block">
-            <h3 class="events-preview__title">Recent Moments</h3>
-            <div class="gallery gallery--preview">
-                <figure class="gallery__item gallery__item--wide"><img src="/images/website logo copy.jpg" alt="Chaliyar Residence Association" class="gallery__img" onclick="openLightbox('/images/website logo copy.jpg', 'Chaliyar Residence Association')"></figure>
-                <figure class="gallery__item"><img src="/images/1 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/1 copy.jpeg', '')"></figure>
-                <figure class="gallery__item"><img src="/images/2 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/2 copy.jpeg', '')"></figure>
-                <figure class="gallery__item"><img src="/images/3 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/3 copy.jpeg', '')"></figure>
-                <figure class="gallery__item"><img src="/images/4 copy.jpeg" class="gallery__img" onclick="openLightbox('/images/4 copy.jpeg', '')"></figure>
+            <h3 class="events-preview__title">Gallery</h3>
+            <p class="activities-intro">
+             A glimpse of memorable events and community
+              moments captured throughout the year.
+            </p>
+            <div class="gallery-preview">
+              <figure class="gallery-preview-card"
+                onclick="window.location='/album.html?id=annual-meeting-2026'">
+                <img
+                  src="/gallery/annual-meeting-2026/cover.jpeg"
+                  alt="Annual General Meeting 2026"
+                  class="gallery__img">
+                <div class="gallery-preview-card__content">
+                  <h4>Annual General Meeting 2026</h4>
+                  <p>17 Photos</p>
+                </div>
+              </figure>
+              <figure class="gallery-preview-card"
+                onclick="window.location='/album.html?id=annual-meeting-2024'">
+                <img
+                  src="/gallery/annual-meeting-2024/cover.jpeg"
+                  alt="Annual General Meeting 2024"
+                  class="gallery__img">
+                <div class="gallery-preview-card__content">
+                  <h4>Annual General Meeting 2024</h4>
+                  <p>24 Photos</p>
+                </div>
+              </figure>
+            </div>
+            <div class="gallery-preview-footer">
+              <a href="/gallery.html" class="btn btn--outline">View More →</a>
             </div>
           </div>
-        </div>
-        <div class="section__more">
-          <a href="/gallery.html" class="btn btn--outline">View More →</a>
         </div>
       </div>
     </section>
@@ -149,28 +215,38 @@
     <section class="section" id="committee">
       <div class="container">
         <div class="section__header section__header--center">
-          <span class="section__eyebrow">Leadership</span>
-          <h2>Residence Committee</h2>
-          <p class="section__intro">Elected by residents to serve the community with transparency and dedication.</p>
+          <span class="section__eyebrow">Executive Leadership</span>
+          <h2>Executive Committee</h2>
+          <p class="section__intro">Meet the office bearers dedicated to serving the Chaliyar Residence community with transparency, commitment and integrity.</p>
         </div>
         <div class="committee" id="committee-grid">
-          <article class="member member--clickable" data-name="Muneer V M" data-role="President" data-avatar="PR" data-contact="muneer@example.com"><div class="member__avatar">PR</div><p class="member__name">Muneer V M</p><h3>President</h3></article>
-          <article class="member member--clickable" data-name="Firos Khan C M" data-role="Secretary" data-avatar="SE" data-contact="firos@example.com"><div class="member__avatar">SE</div><p class="member__name">Firos Khan C M</p><h3>Secretary</h3></article>
-          <article class="member member--clickable" data-name="Balakrishna Pilla" data-role="Treasurer" data-avatar="TR" data-contact="balakrishna@example.com"><div class="member__avatar">TR</div><p class="member__name">Balakrishna Pilla</p><h3>Treasurer</h3></article>
-          <article class="member member--clickable" data-name="Shameer Ali C U" data-role="Vice President" data-avatar="VP" data-contact="shameer@example.com"><div class="member__avatar">VP</div><p class="member__name">Shameer Ali C U</p><h3>Vice President</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Jishi" data-role="Joint Secretary" data-avatar="JS" data-contact="jishi@example.com"><div class="member__avatar">JS</div><p class="member__name">Jishi</p><h3>Joint Secretary</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Zubair V M" data-role="Executive Member" data-avatar="E1" data-contact="zubair@example.com"><div class="member__avatar">E1</div><p class="member__name">Zubair V M</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Usman Koya" data-role="Executive Member" data-avatar="E2" data-contact="usman@example.com"><div class="member__avatar">E2</div><p class="member__name">Usman Koya</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Anil Kumar K" data-role="Executive Member" data-avatar="E3" data-contact="anil@example.com"><div class="member__avatar">E3</div><p class="member__name">Anil Kumar K</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Venu Gopalakrishnan C N" data-role="Executive Member" data-avatar="E4" data-contact="venu@example.com"><div class="member__avatar">E4</div><p class="member__name">Venu Gopalakrishnan C N</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Abdurahiman M" data-role="Executive Member" data-avatar="E5" data-contact="abdurahiman@example.com"><div class="member__avatar">E5</div><p class="member__name">Abdurahiman M</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Abdu C P" data-role="Executive Member" data-avatar="E6" data-contact="abdu@example.com"><div class="member__avatar">E6</div><p class="member__name">Abdu C P</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Moideen" data-role="Executive Member" data-avatar="E7" data-contact="moideen@example.com"><div class="member__avatar">E7</div><p class="member__name">Moideen</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Santhoosh P T" data-role="Executive Member" data-avatar="E8" data-contact="santhoosh@example.com"><div class="member__avatar">E8</div><p class="member__name">Santhoosh P T</p><h3>Executive Member</h3></article>
-          <article class="member committee__hidden member--clickable" data-name="Abdul Asees A" data-role="Executive Member" data-avatar="E9" data-contact="abdul@example.com"><div class="member__avatar">E9</div><p class="member__name">Abdul Asees A</p><h3>Executive Member</h3></article>
+          <article class="member member--clickable" data-name="Anil Kumar K" data-role="President" data-avatar="PR" data-contact=""><div class="member__avatar"><img src="/committee/anil-kumar-k.jpg" alt="Anil Kumar K"></div><p class="member__name">Anil Kumar K</p><h3>President</h3></article>
+          <article class="member member--clickable" data-name="Zubair V M" data-role="Secretary" data-avatar="SE" data-contact=""><div class="member__avatar"><img src="/committee/zubair-v-m.jpg" alt="Zubair V M"></div><p class="member__name">Zubair V M</p><h3>Secretary</h3></article>
+          <article class="member member--clickable" data-name="Noushad Ali M P" data-role="Treasurer" data-avatar="TR" data-contact=""><div class="member__avatar"><img src="/committee/noushad-ali-m-p.jpg" alt="Noushad Ali M P"></div><p class="member__name">Noushad Ali M P</p><h3>Treasurer</h3></article>
+          <article class="member member--clickable" data-name="Muneer V M" data-role="Vice President" data-avatar="VP" data-contact=""><div class="member__avatar"><img src="/committee/muneer-v-m.jpg" alt="Muneer V M"></div><p class="member__name">Muneer V M</p><h3>Vice President</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Firozkhan C M" data-role="Joint Secretary" data-avatar="JS" data-contact=""><div class="member__avatar"><img src="/committee/firozkhan-c-m.jpg" alt="Firozkhan C M"></div><p class="member__name">Firozkhan C M</p><h3>Joint Secretary</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Shameer Ali C U" data-role="Executive Member" data-avatar="E1" data-contact=""><div class="member__avatar"><img src="/committee/shameer-ali-c-u.jpg" alt="Shameer Ali C U"></div><p class="member__name">Shameer Ali C U</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Balakrishna Pilla" data-role="Executive Member" data-avatar="E2" data-contact=""><div class="member__avatar"><img src="/committee/balakrishna-pilla.jpg" alt="Balakrishna Pilla"></div><p class="member__name">Balakrishna Pilla</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Venugopalan N" data-role="Executive Member" data-avatar="E3" data-contact=""><div class="member__avatar"><img src="/committee/venugopalan-n.jpg" alt="Venugopalan N"></div><p class="member__name">Venugopalan N</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Abdul Asees M T" data-role="Executive Member" data-avatar="E4" data-contact=""><div class="member__avatar"><img src="/committee/abdul-asees-m-t.jpg" alt="Abdul Asees M T"></div><p class="member__name">Abdul Asees M T</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Abdurahiman M" data-role="Executive Member" data-avatar="E5" data-contact=""><div class="member__avatar"><img src="/committee/abdurahiman-m.jpg" alt="Abdurahiman M"></div><p class="member__name">Abdurahiman M</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Usman Koya" data-role="Executive Member" data-avatar="E6" data-contact=""><div class="member__avatar"><img src="/committee/usman-koya.jpg" alt="Usman Koya"></div><p class="member__name">Usman Koya</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Santhosh P T" data-role="Executive Member" data-avatar="E7" data-contact=""><div class="member__avatar"><img src="/committee/santhosh-p-t.jpg" alt="Santhosh P T"></div><p class="member__name">Santhosh P T</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Gopalan T M" data-role="Executive Member" data-avatar="E8" data-contact=""><div class="member__avatar"><img src="/committee/gopalan-t-m.jpg" alt="Gopalan T M"></div><p class="member__name">Gopalan T M</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Abdusalam K" data-role="Executive Member" data-avatar="E9" data-contact=""><div class="member__avatar"><img src="/committee/abdusalam-k.jpg" alt="Abdusalam K"></div><p class="member__name">Abdusalam K</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Danoop N" data-role="Executive Member" data-avatar="E10" data-contact=""><div class="member__avatar"><img src="/committee/danoop-n.jpg" alt="Danoop N"></div><p class="member__name">Danoop N</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Musthafa M P" data-role="Executive Member" data-avatar="E11" data-contact=""><div class="member__avatar"><img src="/committee/musthafa-m-p.jpg" alt="Musthafa M P"></div><p class="member__name">Musthafa M P</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Jishi K" data-role="Executive Member" data-avatar="E12" data-contact=""><div class="member__avatar"><img src="/committee/jishi-k.jpg" alt="Jishi K"></div><p class="member__name">Jishi K</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Sabith P" data-role="Executive Member" data-avatar="E13" data-contact=""><div class="member__avatar"><img src="/committee/sabith-p.jpg" alt="Sabith P"></div><p class="member__name">Sabith P</p><h3>Executive Member</h3></article>
+          <article class="member committee__hidden member--clickable" data-name="Muhammed Aloof V M" data-role="Executive Member" data-avatar="E14" data-contact=""><div class="member__avatar"><img src="/committee/muhammed-aloof-v-m.jpg" alt="Muhammed Aloof V M"></div><p class="member__name">Muhammed Aloof V M</p><h3>Executive Member</h3></article>
         </div>
         <div class="section__more">
-          <button type="button" class="btn btn--outline" id="committee-toggle" data-expanded="false">Show more →</button>
+          <button
+            type="button"
+            class="btn btn--outline"
+            id="committee-toggle"
+            data-expanded="false">View All Committee ↓
+          </button>
         </div>
       </div>
     </section>
@@ -191,7 +267,7 @@
           <div class="form__group"><label for="name">Your Name</label><input type="text" id="name" name="name" required placeholder="Full name"></div>
           <div class="form__group"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="you@example.com"></div>
           <div class="form__group"><label for="message">Message</label><textarea id="message" name="message" rows="4" required placeholder="How can we help?"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <button type="submit" class="btn btn--primary btn--full">Contact Committee</button>
           <p class="form__note" id="form-note" hidden>Thank you! Your message has been noted.</p>
         </form>
       </div>

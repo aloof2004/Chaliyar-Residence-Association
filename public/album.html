@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album | Chaliyar Residence Association</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a href="/site.html" class="nav__brand">
+                <img src="/gallery/logo.png" class="nav__brand-logo">
+                <span class="nav__brand-text">
+                    <strong>Chaliyar Residence</strong>
+                    <small>Karad Paramba</small>
+                 </span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="/site.html">Home</a></li>
+                <li><a href="/gallery.html" class="active">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section class="page-hero">
+        <div class="container page-hero__content">
+            <a href="/gallery.html" class="page-hero__back">← Back to Gallery</a>
+            <h1 id="album-title"></h1>
+            <p id="album-description"></p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="gallery gallery--full" id="album-grid"></div>
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox__content">
+        <button class="lightbox__close" onclick="closeLightbox()">            ✕
+        </button>
+        <button class="lightbox__prev" onclick="previousImage(event)">❮</button>
+        <img
+            id="lightbox__image"
+            class="lightbox__img"
+        >
+        <button class="lightbox__next" onclick="nextImage(event)">❯</button>
+        <p id="lightbox__caption"></p>
+    </div>
+</div>
+
+<script src="/data/albums.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/album.js"></script>
+
+</body>
+
+</html>

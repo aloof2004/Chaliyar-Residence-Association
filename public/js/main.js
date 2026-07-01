@@ -103,27 +103,34 @@
     });
   }
 
-  /* Gallery folder tabs */
-  const galleryFolders = document.getElementById("gallery-folders");
+  /* Album Gallery */
   const galleryGrid = document.getElementById("gallery-grid");
-  if (galleryFolders && galleryGrid) {
-    const items = galleryGrid.querySelectorAll("[data-folder]");
-    galleryFolders.addEventListener("click", (e) => {
-      const btn = e.target.closest(".gallery-folder");
-      if (!btn) return;
-      const folder = btn.getAttribute("data-folder");
-      galleryFolders.querySelectorAll(".gallery-folder").forEach((b) => b.classList.remove("gallery-folder--active"));
-      btn.classList.add("gallery-folder--active");
-      items.forEach((item) => {
-        if (folder === "all" || item.getAttribute("data-folder") === folder) {
-          item.style.display = "";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
-    /* Reset folder items on page load */
-    items.forEach((item) => item.style.display = "");
+  if (galleryGrid && typeof albums !== "undefined") {
+    galleryGrid.innerHTML = "";
+    albums.forEach(album => {
+      const card = document.createElement("a");
+      card.href = `/album.html?id=${album.id}`;
+      card.className = "gallery__item";
+      card.innerHTML = `
+      <div class="album-cover">
+        <img
+          src="/gallery/${album.folder}/1.jpeg"
+          class="gallery__img"
+          alt="${album.title}">
+      </div>
+      <div class="album-info">
+        <span class="album-badge">Gallery</span>
+        <h3>${album.title}</h3>
+        <p class="album-count">
+          📷 ${album.total} Photos
+        </p>
+        <span class="album-link">
+          View Album →
+        </span>
+      </div>
+      `;
+      galleryGrid.appendChild(card);
+   });
   }
 
   /* Committee show more */
@@ -135,10 +142,9 @@
       const next = !expanded;
       committeeGrid.classList.toggle("committee--expanded", next);
       committeeToggle.setAttribute("data-expanded", String(next));
-      committeeToggle.textContent = next ? "Show less ↑" : "Show more →";
+      committeeToggle.textContent = next ? "Show Less ↑" : "View All Committee ↓";
     });
   }
-
 })();
 
 /* Lightbox functions */
@@ -162,18 +168,25 @@ function closeLightbox(event) {
 }
 
 /* Member Modal functions */
-function openMemberModal(name, role, avatar, contact) {
+function openMemberModal(name, role, avatar, contact, image = "") {
   const modal = document.getElementById("member-modal");
   const avatarEl = document.getElementById("member-modal-avatar");
   const nameEl = document.getElementById("member-modal-name");
   const roleEl = document.getElementById("member-modal-role");
   const contactEl = document.getElementById("member-modal-contact");
-  
-  avatarEl.textContent = avatar;
+  if (image) {
+
+    avatarEl.innerHTML = `
+      <img src="${image}" alt="${name}">
+    `;
+  } else {
+    avatarEl.textContent = avatar;
+  }
   nameEl.textContent = name;
   roleEl.textContent = role;
-  contactEl.textContent = "Contact: " + contact;
-  
+  contactEl.textContent = contact
+      ? "Contact: " + contact
+      : "";
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -191,11 +204,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const memberCards = document.querySelectorAll(".member--clickable");
   memberCards.forEach((card) => {
     card.addEventListener("click", () => {
-      const name = card.getAttribute("data-name");
-      const role = card.getAttribute("data-role");
-      const avatar = card.getAttribute("data-avatar");
-      const contact = card.getAttribute("data-contact");
-      openMemberModal(name, role, avatar, contact);
+      const name = card.dataset.name;
+      const role = card.dataset.role;
+      const avatar = card.dataset.avatar;
+      const contact = card.dataset.contact;
+      const image = card.querySelector("img");
+      openMemberModal(
+        name,
+        role,
+        avatar,
+        contact,
+        image ? image.src : ""
+      );
     });
   });
 });
